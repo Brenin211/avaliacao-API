@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/cadastro', (req, res) => {
-const { modelo, marca, peso, cor, placa, cidade, ano, eixos} = req.body;
+const {combustivel, modelo, marca, peso, cor, placa, cidade, ano, eixos} = req.body;
 
-const caminhao = new Caminhao(modelo, marca, peso, cor, placa, cidade, ano, eixos);
+const caminhao = new Caminhao(combustivel, modelo, marca, peso, cor, placa, cidade, ano, eixos);
 
 console.log(caminhao);
 

@@ -1,5 +1,6 @@
-   export class Veiculo{
- private modelo: string;
+export class Veiculo {
+    private combustivel: string;
+    private modelo: string;
     private marca: string;
     private peso: number;
     private cor: string;
@@ -7,7 +8,8 @@
     private cidade: string;
     private ano: string;
 
-    public constructor(_modelo: string , _marca: string , _peso: number , _cor: string , _placa: string , _cidade: string , _ano: string){
+    public constructor(_combustivel: string,_modelo: string, _marca: string, _peso: number, _cor: string, _placa: string, _cidade: string, _ano: string,) {
+        this.combustivel = _combustivel
         this.modelo = _modelo;
         this.marca = _marca;
         this.peso = _peso;
@@ -17,12 +19,19 @@
         this.ano = _ano;
     }
 
-    
-    public setModelo(_modelo: string): void{
+    public setCombustivel(_combustivel: string): void {
+        this.combustivel = _combustivel;
+    }
+
+    public getCombustivel() {
+        return this.combustivel;
+    }
+
+    public setModelo(_modelo: string): void {
         this.modelo = _modelo;
     }
 
-    public getModelo(){
+    public getModelo() {
         return this.modelo;
     }
 
@@ -38,7 +47,7 @@
         this.peso = _peso;
     }
 
-    public getPeso(){
+    public getPeso() {
         return this.peso;
     }
 
@@ -51,10 +60,10 @@
     }
 
     public setPlaca(_placa: string): void {
-        this.placa = _placa; 
+        this.placa = _placa;
     }
 
-    public getPlaca(){
+    public getPlaca() {
         return this.placa;
     }
 
@@ -62,7 +71,7 @@
         this.cidade = _cidade;
     }
 
-    public getCidade(){
+    public getCidade() {
         return this.cidade;
     }
 
@@ -70,7 +79,7 @@
         this.ano = _ano;
     }
 
-    public getAno(){
+    public getAno() {
         return this.ano;
     }
 
