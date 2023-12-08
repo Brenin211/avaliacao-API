@@ -18,11 +18,11 @@ function listarCarros() {
 }
 exports.listarCarros = listarCarros;
 function inicializarCarros() {
-    bancoDadosCarro.push(new Carro_1.Carro('Uno', 'Fiat', 800, 'cinza', 'NFN9D38', 'São Carlos', '1970', 'automático'));
-    bancoDadosCarro.push(new Carro_1.Carro('fusca', 'volkswagen', 1000, `Preto`, `DBD7N99`, `Ribeirão Preto`, '2000', `Manual`));
-    bancoDadosCarro.push(new Carro_1.Carro('Hylux', 'Toyota', 1100, 'prata', 'NID4D', 'Barrinha', '2010', 'automático'));
-    bancoDadosCarro.push(new Carro_1.Carro('Mustang', 'Ford', 850, 'Preto', 'BRE1V05', 'Candia', '2017', 'Manual'));
-    bancoDadosCarro.push(new Carro_1.Carro('Commander', 'Jeep', 800, 'Azul', 'BLA8T322', 'Pontal', '1998', 'Automático'));
+    bancoDadosCarro.push(new Carro_1.Carro('Gasolina', 'Uno', `Fiat`, 800, 'cinza', 'NFN9D38', 'São Carlos', '1970', 'automático'));
+    bancoDadosCarro.push(new Carro_1.Carro('Gasolina', 'fusca', 'volkswagen', 1000, `Preto`, `DBD7N99`, `Ribeirão Preto`, '2000', `Manual`));
+    bancoDadosCarro.push(new Carro_1.Carro('Diesel', 'Hylux', 'Toyota', 1100, 'prata', 'NID4D', 'Barrinha', '2010', 'automático'));
+    bancoDadosCarro.push(new Carro_1.Carro('Álcool', 'Mustang', 'Ford', 850, 'Preto', 'BRE1V05', 'Candia', '2017', 'Manual'));
+    bancoDadosCarro.push(new Carro_1.Carro('Diesel', 'Commander', 'Jeep', 800, 'Azul', 'BLA8T322', 'Pontal', '1998', 'Automático'));
 }
 exports.inicializarCarros = inicializarCarros;
 //# sourceMappingURL=bancoDeDadosCarro.js.map

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Veiculo = void 0;
 class Veiculo {
+    combustivel;
     modelo;
     marca;
     peso;
@@ -9,7 +10,8 @@ class Veiculo {
     placa;
     cidade;
     ano;
-    constructor(_modelo, _marca, _peso, _cor, _placa, _cidade, _ano) {
+    constructor(_combustivel, _modelo, _marca, _peso, _cor, _placa, _cidade, _ano) {
+        this.combustivel = _combustivel;
         this.modelo = _modelo;
         this.marca = _marca;
         this.peso = _peso;
@@ -17,6 +19,12 @@ class Veiculo {
         this.placa = _placa;
         this.cidade = _cidade;
         this.ano = _ano;
+    }
+    setCombustivel(_combustivel) {
+        this.combustivel = _combustivel;
+    }
+    getCombustivel() {
+        return this.combustivel;
     }
     setModelo(_modelo) {
         this.modelo = _modelo;

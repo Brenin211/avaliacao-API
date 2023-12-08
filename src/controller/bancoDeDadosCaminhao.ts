@@ -3,10 +3,10 @@ import { Caminhao } from "../model/Caminhao";
 
 let bancoDadosCaminhao: Caminhao[] = [];
 
-export function persistirCaminhao(Caminhao: Caminhao) {
+export function persistirCaminhao(caminhao: Caminhao) {
     //persistindo os dados
     try {
-        bancoDadosCaminhao.push(Caminhao);
+        bancoDadosCaminhao.push(caminhao);
     } catch {
         return `Erro ao persistir os dados\n ${Error}`;
     }

@@ -4,8 +4,8 @@ exports.Caminhao = void 0;
 const Veiculo_1 = require("./Veiculo");
 class Caminhao extends Veiculo_1.Veiculo {
     eixos;
-    constructor(_modelo, _marca, _peso, _cor, _placa, _cidade, _ano, _eixos) {
-        super(_modelo, _marca, _peso, _cor, _placa, _cidade, _ano);
+    constructor(_combustivel, _modelo, _marca, _peso, _cor, _placa, _cidade, _ano, _eixos) {
+        super(_combustivel, _modelo, _marca, _peso, _cor, _placa, _cidade, _ano);
         this.eixos = _eixos;
     }
     setEixos(_eixos) {

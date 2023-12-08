@@ -2,14 +2,12 @@ import express from "express";
 import cors from 'cors';
 import { Carro } from "../model/Carro";
 import { Veiculo } from "../model/Veiculo";
-import { inicializarCarros, listarCarros, persistirCarro } from "./bancoDeDadosCarro";
-
-
+import { inicializarCarros, persistirCarro, listarCarros } from "./bancoDeDadosCarro";
 
 inicializarCarros();
 
 const app = express();
-const port: number = 3000;
+const port: number = 4000;
 
 app.use(express.json());
 
@@ -33,7 +31,7 @@ persistirCarro(carro);
 res.json({ mensagem: "Carro cadastrado com sucesso" })
 })
 
-app.get('/carros', (req, res) => {
+app.get('/carro', (req, res) => {
     const listaDeCarros = listarCarros();
 
 	console.log(`Retornando a lista de carros cadastrados`);

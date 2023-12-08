@@ -1,15 +1,13 @@
 import express from "express";
 import cors from 'cors';
-import { Caminhao } from "../model/Caminhao";
 import { Veiculo } from "../model/Veiculo";
-import { inicializarCaminhoes, listarCaminhoes, persistirCaminhao} from "./bancoDeDadosCaminhao";
-
-
+import { Caminhao } from "../model/Caminhao";
+import { inicializarCaminhoes, listarCaminhoes, persistirCaminhao } from "./bancoDeDadosCaminhao";
 
 inicializarCaminhoes();
 
 const app = express();
-const port: number = 3000;
+const port: number = 4001;
 
 app.use(express.json());
 
@@ -22,9 +20,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/cadastro', (req, res) => {
-const {combustivel, modelo, marca, peso, cor, placa, cidade, ano, eixos} = req.body;
+const {combustivel,modelo, marca, peso, cor, placa, cidade, ano, eixos} = req.body;
 
-const caminhao = new Caminhao(combustivel, modelo, marca, peso, cor, placa, cidade, ano, eixos);
+const caminhao = new Caminhao(combustivel,modelo, marca, peso, cor, placa, cidade, ano, eixos);
 
 console.log(caminhao);
 
@@ -33,12 +31,12 @@ persistirCaminhao(caminhao);
 res.json({ mensagem: "Caminhão cadastrado com sucesso" })
 })
 
-app.get('/caminhoes', (req, res) => {
+app.get('/caminhao', (req, res) => {
     const listaDeCaminhoes = listarCaminhoes();
 
-	console.log(`Retornando a lista de caminhões cadastrados`);
+	console.log(`Retornando a lista de caminhoes cadastrados`);
 
-    res.json(listarCaminhoes);
+    res.json(listaDeCaminhoes);
 });
 
 app.listen(port, () => {
